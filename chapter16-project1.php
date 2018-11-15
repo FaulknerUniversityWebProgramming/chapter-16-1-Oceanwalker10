@@ -50,7 +50,7 @@
                                 <select name="philosopher">
                                     <option value="0">Choose a philosopher to be stored in session cookie</option>
                                     <option>John Locke</option>
-                                    <option>Karl Marx</option>
+                                    <option>Karl Marx(evil)</option>
                                     <option>Thomas Hobbes</option>
                                 </select>
 
