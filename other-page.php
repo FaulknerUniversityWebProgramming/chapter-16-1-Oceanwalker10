@@ -1,6 +1,20 @@
 <?php
+    require_once("make-cookies.php");
 
+        // Funciton to display information in the Reading the Cookie Card
+        function otherpage() {
+            if(isset($_COOKIE['Theme'])) {
+                echo "The Persistent THEME cookies value is : " .$_COOKIE['Theme']. "<br><br>";
+            } else {
+                echo "THEME cookie not found.<br><br>";
+            }
 
+            if(isset($_COOKIE['Philosopher'])) {
+                echo "The session PHILOSOPHER cookie value is : " .$_COOKIE['Philosopher']. "<br><br>";
+            } else {
+                echo "Session PHILOSOPHER cookie not found.<br><br>";
+            }
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +56,7 @@
                 <div class="mdl-card__supporting-text">
                     
                     <?php
-     
+                        otherpage();
                     ?> 
                     
                     
