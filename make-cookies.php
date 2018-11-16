@@ -4,7 +4,7 @@
         $expiryTime = time() + 60 * 60 * 24;
         
         setcookie("Theme", $_POST['theme'], $expiryTime);
-        $_SESSION['Philosopher'] = $_POST['philosopher'];
+        setcookie("Philosopher", $_POST['philosopher'], 0);
         
         header("Location: chapter16-project1.php");
     }

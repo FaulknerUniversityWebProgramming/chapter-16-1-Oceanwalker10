@@ -1,4 +1,23 @@
-<?php ?>
+<?php 
+    require_once("make-cookies.php");
+    
+    // Funciton to display information in the Reading the Cookie Card
+    function readingtheCookie() {
+        if(isset($_COOKIE['Theme'])) {
+            echo "The Persistent THEME cookies value is : " .$_COOKIE['Theme']. "<br><br>";
+        } else {
+            echo "No theme was selected.<br><br>";
+        }
+        echo "<b>To test his persistent cookie, close browser and then reopen this page</b><br>";
+        
+        if(isset($_COOKIE['Philosopher'])) {
+            echo "The session PHILOSOPHER cookie value is : " .$_COOKIE['Philosopher']. "<br><br>";
+        } else {
+            echo "No philosopher was selected.<br><br>";
+        }
+        echo "<b>To test this sessioin cookie, click link before to go to another page in same domain</b>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +90,7 @@
                         </div>
                         <div class="mdl-card__supporting-text">
 
-                        <?php ?> 
+                        <?php readingtheCookie();?> 
 
 
                         </div>
